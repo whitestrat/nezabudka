@@ -6,3 +6,4 @@ bin/
 .idea/
 *.swp
 .DS_Store
+legacy/
