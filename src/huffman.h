@@ -3,6 +3,8 @@
 #include <string>
 #include <queue>
 #include <vector>
+#include <bitset>
+
 struct Node{ 
     size_t weight;
     Node(size_t _weight):weight(_weight){};
@@ -18,12 +20,12 @@ std::ostream& operator <<(std::ostream& os, const Node* node){
 }
 
 struct LeafNode : public Node{
-    char sym;
-    LeafNode(size_t _weight, char _sym):Node(_weight), sym(_sym){};
+    std::bitset sym;
+    LeafNode(size_t _weight, std::bitset _sym):Node(_weight), sym(_sym){};
     bool isLeaf() const override{
         return true;
     }
-    void build_map(std::unordered_map<char, std::string>& enc, std::string code)override{
+    void build_map(std::unordered_map<std::bitset, std::string>& enc, std::string code)override{
         enc[sym] = code;
     }
 };
