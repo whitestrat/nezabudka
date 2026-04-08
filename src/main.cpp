@@ -12,14 +12,14 @@ int main(int argc, char* argv[]){
 	// 	cout << "Empty entry" << endl;
 	// }
 	try {
-		HuffmanCode("data/file");
+		HuffmanCode("data/war_and_peace.txt");
 	}
 	catch (const std::runtime_error& e) {
         std::cerr << "Runtime error: " << e.what() << std::endl;
         return 1;
     }
 	try {
-		HuffmanDecode("data/file.bin");
+		HuffmanDecode("data/war_and_peace.txt.bin");
 	}
 	catch (const std::runtime_error& e) {
         std::cerr << "Runtime error: " << e.what() << std::endl;

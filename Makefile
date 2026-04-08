@@ -1,6 +1,6 @@
 TARGET = nezabudka
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra -O2 -g -MMD -MP
+CXXFLAGS = -std=c++17 -Wall -Wextra -O3 -g -MMD -MP
 SRC_DIR = src
 BUILD_DIR = build
 BIN_DIR = bin
